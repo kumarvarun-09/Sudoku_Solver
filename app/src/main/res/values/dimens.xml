@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="btnWidth">36dp</dimen>
+    <dimen name="btnHeight">36dp</dimen>
+    <dimen name="btnMargin">1dp</dimen>
+    <dimen name="borderMargin">3dp</dimen>
+    <dimen name="midBorderMargin">3dp</dimen>
+    <dimen name="txtSize">29dp</dimen>
+</resources>

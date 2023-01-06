@@ -1,0 +1,1362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/b00"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginLeft="@dimen/borderMargin"
+                    android:layout_marginTop="@dimen/borderMargin"
+                    android:layout_marginRight="@dimen/btnMargin"
+                    android:background="@color/white"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:onClick="setVal" />
+
+                <TextView
+                    android:id="@+id/b01"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/borderMargin"
+                    android:layout_marginRight="@dimen/btnMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b02"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/borderMargin"
+                    android:layout_marginRight="@dimen/borderMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b03"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/borderMargin"
+                    android:layout_marginRight="@dimen/btnMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b04"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/borderMargin"
+                    android:layout_marginRight="@dimen/btnMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b05"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/borderMargin"
+                    android:layout_marginRight="@dimen/borderMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b06"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/borderMargin"
+                    android:layout_marginRight="@dimen/btnMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b07"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/borderMargin"
+                    android:layout_marginRight="@dimen/btnMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b08"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/borderMargin"
+                    android:layout_marginRight="@dimen/borderMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:gravity="center"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:id="@+id/b10"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginLeft="@dimen/borderMargin"
+                    android:layout_marginTop="@dimen/btnMargin"
+                    android:layout_marginRight="@dimen/btnMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b11"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/btnMargin"
+                    android:layout_marginRight="@dimen/btnMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b12"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/btnMargin"
+                    android:layout_marginRight="@dimen/borderMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b13"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/btnMargin"
+                    android:layout_marginRight="@dimen/btnMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b14"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/btnMargin"
+                    android:layout_marginRight="@dimen/btnMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b15"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/btnMargin"
+                    android:layout_marginRight="@dimen/borderMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b16"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/btnMargin"
+                    android:layout_marginRight="@dimen/btnMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b17"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/btnMargin"
+                    android:layout_marginRight="@dimen/btnMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b18"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/btnMargin"
+                    android:layout_marginRight="@dimen/borderMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/b20"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginLeft="@dimen/borderMargin"
+                    android:layout_marginTop="@dimen/btnMargin"
+                    android:layout_marginRight="@dimen/btnMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b21"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/btnMargin"
+                    android:layout_marginRight="@dimen/btnMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b22"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/btnMargin"
+                    android:layout_marginRight="@dimen/borderMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b23"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/btnMargin"
+                    android:layout_marginRight="@dimen/btnMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b24"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/btnMargin"
+                    android:layout_marginRight="@dimen/btnMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b25"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/btnMargin"
+                    android:layout_marginRight="@dimen/borderMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b26"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/btnMargin"
+                    android:layout_marginRight="@dimen/btnMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b27"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/btnMargin"
+                    android:layout_marginRight="@dimen/btnMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b28"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/btnMargin"
+                    android:layout_marginRight="@dimen/borderMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/b30"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginLeft="@dimen/borderMargin"
+                    android:layout_marginTop="@dimen/midBorderMargin"
+                    android:layout_marginRight="@dimen/btnMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b31"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/midBorderMargin"
+                    android:layout_marginRight="@dimen/btnMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b32"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/midBorderMargin"
+                    android:layout_marginRight="@dimen/borderMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b33"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/midBorderMargin"
+                    android:layout_marginRight="@dimen/btnMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b34"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/midBorderMargin"
+                    android:layout_marginRight="@dimen/btnMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b35"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/midBorderMargin"
+                    android:layout_marginRight="@dimen/borderMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b36"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/midBorderMargin"
+                    android:layout_marginRight="@dimen/btnMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b37"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/midBorderMargin"
+                    android:layout_marginRight="@dimen/btnMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b38"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/midBorderMargin"
+                    android:layout_marginRight="@dimen/borderMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/b40"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginLeft="@dimen/borderMargin"
+                    android:layout_marginTop="@dimen/btnMargin"
+                    android:layout_marginRight="@dimen/btnMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b41"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/btnMargin"
+                    android:layout_marginRight="@dimen/btnMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b42"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/btnMargin"
+                    android:layout_marginRight="@dimen/borderMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b43"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/btnMargin"
+                    android:layout_marginRight="@dimen/btnMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b44"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/btnMargin"
+                    android:layout_marginRight="@dimen/btnMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b45"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/btnMargin"
+                    android:layout_marginRight="@dimen/borderMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b46"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/btnMargin"
+                    android:layout_marginRight="@dimen/btnMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b47"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/btnMargin"
+                    android:layout_marginRight="@dimen/btnMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b48"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/btnMargin"
+                    android:layout_marginRight="@dimen/borderMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/b50"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginLeft="@dimen/borderMargin"
+                    android:layout_marginTop="@dimen/btnMargin"
+                    android:layout_marginRight="@dimen/btnMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b51"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/btnMargin"
+                    android:layout_marginRight="@dimen/btnMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b52"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/btnMargin"
+                    android:layout_marginRight="@dimen/borderMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b53"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/btnMargin"
+                    android:layout_marginRight="@dimen/btnMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b54"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/btnMargin"
+                    android:layout_marginRight="@dimen/btnMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b55"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/btnMargin"
+                    android:layout_marginRight="@dimen/borderMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b56"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/btnMargin"
+                    android:layout_marginRight="@dimen/btnMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b57"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/btnMargin"
+                    android:layout_marginRight="@dimen/btnMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b58"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/btnMargin"
+                    android:layout_marginRight="@dimen/borderMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/b60"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginLeft="@dimen/borderMargin"
+                    android:layout_marginTop="@dimen/midBorderMargin"
+                    android:layout_marginRight="@dimen/btnMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b61"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/midBorderMargin"
+                    android:layout_marginRight="@dimen/btnMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b62"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/midBorderMargin"
+                    android:layout_marginRight="@dimen/borderMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b63"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/midBorderMargin"
+                    android:layout_marginRight="@dimen/btnMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b64"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/midBorderMargin"
+                    android:layout_marginRight="@dimen/btnMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b65"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/midBorderMargin"
+                    android:layout_marginRight="@dimen/borderMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b66"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/midBorderMargin"
+                    android:layout_marginRight="@dimen/btnMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b67"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/midBorderMargin"
+                    android:layout_marginRight="@dimen/btnMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b68"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/midBorderMargin"
+                    android:layout_marginRight="@dimen/borderMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/b70"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginLeft="@dimen/borderMargin"
+                    android:layout_marginTop="@dimen/btnMargin"
+                    android:layout_marginRight="@dimen/btnMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b71"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/btnMargin"
+                    android:layout_marginRight="@dimen/btnMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b72"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/btnMargin"
+                    android:layout_marginRight="@dimen/borderMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b73"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/btnMargin"
+                    android:layout_marginRight="@dimen/btnMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b74"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/btnMargin"
+                    android:layout_marginRight="@dimen/btnMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b75"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/btnMargin"
+                    android:layout_marginRight="@dimen/borderMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b76"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/btnMargin"
+                    android:layout_marginRight="@dimen/btnMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b77"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/btnMargin"
+                    android:layout_marginRight="@dimen/btnMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b78"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/btnMargin"
+                    android:layout_marginRight="@dimen/borderMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/btnMargin"
+                android:onClick="setVal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/b80"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginLeft="@dimen/borderMargin"
+                    android:layout_marginTop="@dimen/btnMargin"
+                    android:layout_marginRight="@dimen/btnMargin"
+                    android:layout_marginBottom="@dimen/borderMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b81"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/btnMargin"
+                    android:layout_marginRight="@dimen/btnMargin"
+                    android:layout_marginBottom="@dimen/borderMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b82"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/btnMargin"
+                    android:layout_marginRight="@dimen/borderMargin"
+                    android:layout_marginBottom="@dimen/borderMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b83"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/btnMargin"
+                    android:layout_marginRight="@dimen/btnMargin"
+                    android:layout_marginBottom="@dimen/borderMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b84"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/btnMargin"
+                    android:layout_marginRight="@dimen/btnMargin"
+                    android:layout_marginBottom="@dimen/borderMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b85"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/btnMargin"
+                    android:layout_marginRight="@dimen/borderMargin"
+                    android:layout_marginBottom="@dimen/borderMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b86"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/btnMargin"
+                    android:layout_marginRight="@dimen/btnMargin"
+                    android:layout_marginBottom="@dimen/borderMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b87"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/btnMargin"
+                    android:layout_marginRight="@dimen/btnMargin"
+                    android:layout_marginBottom="@dimen/borderMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/b88"
+                    android:layout_width="@dimen/btnWidth"
+                    android:layout_height="@dimen/btnHeight"
+                    android:layout_marginTop="@dimen/btnMargin"
+                    android:layout_marginRight="@dimen/borderMargin"
+                    android:layout_marginBottom="@dimen/borderMargin"
+                    android:onClick="setVal"
+                    android:textSize="@dimen/txtSize"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/white" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:gravity="center"
+            android:paddingTop="@dimen/borderMargin"
+            android:layout_marginBottom="25dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/enter1"
+                android:layout_width="@dimen/btnWidth"
+                android:layout_height="@dimen/btnHeight"
+                android:layout_marginLeft="@dimen/borderMargin"
+                android:layout_marginTop="@dimen/btnMargin"
+                android:layout_marginRight="@dimen/btnMargin"
+                android:layout_marginBottom="@dimen/borderMargin"
+                android:onClick="enterNumber"
+                android:textSize="@dimen/txtSize"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:background="@color/grey" />
+
+            <TextView
+                android:id="@+id/enter2"
+                android:layout_width="@dimen/btnWidth"
+                android:layout_height="@dimen/btnHeight"
+                android:layout_marginTop="@dimen/btnMargin"
+                android:layout_marginRight="@dimen/btnMargin"
+                android:layout_marginBottom="@dimen/borderMargin"
+                android:background="@color/grey"
+                android:onClick="enterNumber"
+                android:textSize="@dimen/txtSize"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/enter3"
+                android:layout_width="@dimen/btnWidth"
+                android:layout_height="@dimen/btnHeight"
+                android:layout_marginTop="@dimen/btnMargin"
+                android:layout_marginRight="@dimen/btnMargin"
+                android:layout_marginBottom="@dimen/borderMargin"
+                android:onClick="enterNumber"
+                android:textSize="@dimen/txtSize"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:background="@color/grey" />
+
+            <TextView
+                android:id="@+id/enter4"
+                android:layout_width="@dimen/btnWidth"
+                android:layout_height="@dimen/btnHeight"
+                android:layout_marginTop="@dimen/btnMargin"
+                android:layout_marginRight="@dimen/btnMargin"
+                android:layout_marginBottom="@dimen/borderMargin"
+                android:onClick="enterNumber"
+                android:textSize="@dimen/txtSize"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:background="@color/grey" />
+
+            <TextView
+                android:id="@+id/enter5"
+                android:layout_width="@dimen/btnWidth"
+                android:layout_height="@dimen/btnHeight"
+                android:layout_marginTop="@dimen/btnMargin"
+                android:layout_marginRight="@dimen/btnMargin"
+                android:layout_marginBottom="@dimen/borderMargin"
+                android:onClick="enterNumber"
+                android:textSize="@dimen/txtSize"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:background="@color/grey" />
+
+            <TextView
+                android:id="@+id/enter6"
+                android:layout_width="@dimen/btnWidth"
+                android:layout_height="@dimen/btnHeight"
+                android:layout_marginTop="@dimen/btnMargin"
+                android:layout_marginRight="@dimen/btnMargin"
+                android:layout_marginBottom="@dimen/borderMargin"
+                android:onClick="enterNumber"
+                android:textSize="@dimen/txtSize"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:background="@color/grey" />
+
+            <TextView
+                android:id="@+id/enter7"
+                android:layout_width="@dimen/btnWidth"
+                android:layout_height="@dimen/btnHeight"
+                android:layout_marginTop="@dimen/btnMargin"
+                android:layout_marginRight="@dimen/btnMargin"
+                android:layout_marginBottom="@dimen/borderMargin"
+                android:onClick="enterNumber"
+                android:textSize="@dimen/txtSize"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:background="@color/grey" />
+
+            <TextView
+                android:id="@+id/enter8"
+                android:layout_width="@dimen/btnWidth"
+                android:layout_height="@dimen/btnHeight"
+                android:layout_marginTop="@dimen/btnMargin"
+                android:layout_marginRight="@dimen/btnMargin"
+                android:layout_marginBottom="@dimen/borderMargin"
+                android:onClick="enterNumber"
+                android:textSize="@dimen/txtSize"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:background="@color/grey" />
+
+            <TextView
+                android:id="@+id/enter9"
+                android:layout_width="@dimen/btnWidth"
+                android:layout_height="@dimen/btnHeight"
+                android:layout_marginTop="@dimen/btnMargin"
+                android:layout_marginRight="@dimen/borderMargin"
+                android:layout_marginBottom="@dimen/borderMargin"
+                android:onClick="enterNumber"
+                android:textSize="@dimen/txtSize"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:background="@color/grey" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/reset"
+                android:onClick="resetBoard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="reset"
+                android:layout_marginRight="25dp"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/blue"
+                android:shadowColor="@color/grey"
+                android:shadowDx="@integer/material_motion_duration_long_1"
+                android:shadowDy="@integer/material_motion_duration_long_1"
+                android:textSize="@dimen/txtSize"/>
+
+            <Button
+                android:id="@+id/solve"
+                android:onClick="solve"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SOLVE"
+                android:shadowColor="@color/grey"
+                android:shadowDx="@integer/material_motion_duration_long_1"
+                android:shadowDy="@integer/material_motion_duration_long_1"
+                android:textColor="@color/blue"
+                android:backgroundTint="@color/white"
+                android:textSize="@dimen/txtSize"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation_view"
+        android:background="@color/darkGrey"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/loading"
+        android:visibility="invisible"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
