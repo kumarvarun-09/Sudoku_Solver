@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     TextView numbers[] = new TextView[9];
     char board[][] = new char[9][9];
     boolean freeze, solveClicked, solved;
+    boolean rowNotSafe, colNotSafe, blockNotSafe;
     int bI, bJ;
     LottieAnimationView lottieAnimationView;
 
@@ -33,8 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    void init()
-    {
+    void init() {
         freeze = solveClicked = solved = false;
         lottieAnimationView = findViewById(R.id.animation_view);
 
@@ -48,8 +48,7 @@ public class MainActivity extends AppCompatActivity {
         numbers[7] = findViewById(R.id.enter8);
         numbers[8] = findViewById(R.id.enter9);
 
-        for(int i = 0; i < 9; i++)
-        {
+        for (int i = 0; i < 9; i++) {
             numbers[i].setText(Integer.toString(i + 1));
         }
 
@@ -146,13 +145,13 @@ public class MainActivity extends AppCompatActivity {
         resetBoard(null);
     }
 
-    public void setVal(View view)
+    public void setVal(View view) //it highlights the row, column, and square block in blue color
     {
-        if(freeze || solveClicked || solved)
+        if (freeze || solveClicked || solved)
             return;
 
-        int iLow = bI - bI % 3, jLow = bJ -  bJ % 3;
-        if(bI >= 0) {
+        int iLow = bI - bI % 3, jLow = bJ - bJ % 3;
+        if (bI >= 0) {
             for (int i = 0; i < 9; i++) {
                 textView[bI][i].setBackgroundColor(getResources().getColor(R.color.white));
                 textView[i][bJ].setBackgroundColor(getResources().getColor(R.color.white));
@@ -164,12 +163,9 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         }
-        for(int i = 0; i < 9; i++)
-        {
-            for(int j = 0; j < 9; j++)
-            {
-                if(view == textView[i][j])
-                {
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                if (view == textView[i][j]) {
                     bI = i;
                     bJ = j;
                 }
@@ -177,15 +173,13 @@ public class MainActivity extends AppCompatActivity {
         }
 
         iLow = bI - bI % 3;
-        jLow = bJ -  bJ % 3;
-        for(int i = 0; i < 9; i++)
-        {
+        jLow = bJ - bJ % 3;
+        for (int i = 0; i < 9; i++) {
             textView[bI][i].setBackgroundColor(getResources().getColor(R.color.skyBlue));
             textView[i][bJ].setBackgroundColor(getResources().getColor(R.color.skyBlue));
             textView[iLow][jLow].setBackgroundColor(getResources().getColor(R.color.skyBlue));
             jLow++;
-            if((i + 1) % 3 == 0)
-            {
+            if ((i + 1) % 3 == 0) {
                 iLow++;
                 jLow -= 3;
             }
@@ -194,18 +188,17 @@ public class MainActivity extends AppCompatActivity {
         clicked.setBackgroundColor(getResources().getColor(R.color.skyBlue2));
     }
 
-    public void enterNumber(View view) {
-        if(freeze || solveClicked || solved) // if a warning is being shown or board has been solved, this button will not work
+    public void enterNumber(View view)// it is called when a number button is pressed
+    {
+        if (freeze || solveClicked || solved) // if a warning is being shown or board has been solved, this button will not work
             return;
 
-        if(bI == -1)
-        {
+        if (bI == -1) {
             emptyBoardWarning();
             return;
         }
-        String str = ((TextView)view).getText().toString();
-        if(!check(str, bI, bJ))
-        {
+        String str = ((TextView) view).getText().toString();
+        if (!check(str, bI, bJ)) {
             warning(str, bI, bJ);
             return;
         }
@@ -225,8 +218,7 @@ public class MainActivity extends AppCompatActivity {
 //                }
 //            }, 2000);
 //        }
-        else
-        {
+        else {
             textView[bI][bJ].setText(str);
             board[bI][bJ] = str.charAt(0);
         }
@@ -240,35 +232,59 @@ public class MainActivity extends AppCompatActivity {
 //        }
     }
 
-    void warning(String str, int bI, int bJ)
-    {
+    void warning(String str, int bI, int bJ) {// highlights row, column, and block in which a number is entered twice
         freeze = true;
-        int iLow = bI - bI % 3, jLow = bJ -  bJ % 3;
-        for(int i = 0; i < 9; i++)
-        {
-            textView[bI][i].setBackgroundColor(getResources().getColor(R.color.red));
-            textView[i][bJ].setBackgroundColor(getResources().getColor(R.color.red));
-            textView[iLow][jLow].setBackgroundColor(getResources().getColor(R.color.red));
-            textView[bI][i].setTextColor(getResources().getColor(R.color.white));
-            textView[i][bJ].setTextColor(getResources().getColor(R.color.white));
-            textView[iLow][jLow].setTextColor(getResources().getColor(R.color.white));
+        int iLow = bI - bI % 3, jLow = bJ - bJ % 3;
+        //this functions works for the latest clicked block only
+        for (int i = 0; i < 9; i++) {
+            textView[bI][i].setBackgroundColor(getResources().getColor(R.color.white));
+            textView[i][bJ].setBackgroundColor(getResources().getColor(R.color.white));
+            textView[iLow][jLow].setBackgroundColor(getResources().getColor(R.color.white));
 
             jLow++;
-            if((i + 1) % 3 == 0)
-            {
+            if ((i + 1) % 3 == 0) {
                 iLow++;
                 jLow -= 3;
             }
         }
-        Toast.makeText(this, "Can't place " + str + " in Highlighted Blocks", Toast.LENGTH_SHORT).show();
+
+        iLow = bI - bI % 3; //reinitializing
+        jLow = bJ - bJ % 3;
+
+        for (int i = 0; i < 9; i++)
+        {
+            if(rowNotSafe)
+            {
+                textView[bI][i].setBackgroundColor(getResources().getColor(R.color.red));
+                textView[bI][i].setTextColor(getResources().getColor(R.color.white));
+            }
+            if(colNotSafe)
+            {
+                textView[i][bJ].setBackgroundColor(getResources().getColor(R.color.red));
+                textView[i][bJ].setTextColor(getResources().getColor(R.color.white));
+            }
+            if(blockNotSafe)
+            {
+                textView[iLow][jLow].setBackgroundColor(getResources().getColor(R.color.red));
+                textView[iLow][jLow].setTextColor(getResources().getColor(R.color.white));
+            }
+
+            jLow++;
+            if ((i + 1) % 3 == 0) {
+                iLow++;
+                jLow -= 3;
+            }
+        }
+        Toast.makeText(this, str + " Already Exists in a Highlighted Block", Toast.LENGTH_SHORT).show();
+        rowNotSafe = colNotSafe = blockNotSafe = false;
+
         final Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
                 // Do something after 1s
-                int iLow = bI - bI % 3, jLow = bJ -  bJ % 3;
-                for(int i = 0; i < 9; i++)
-                {
+                int iLow = bI - bI % 3, jLow = bJ - bJ % 3;
+                for (int i = 0; i < 9; i++) {
                     textView[bI][i].setBackgroundColor(getResources().getColor(R.color.skyBlue));
                     textView[i][bJ].setBackgroundColor(getResources().getColor(R.color.skyBlue));
                     textView[iLow][jLow].setBackgroundColor(getResources().getColor(R.color.skyBlue));
@@ -277,8 +293,7 @@ public class MainActivity extends AppCompatActivity {
                     textView[iLow][jLow].setTextColor(getResources().getColor(R.color.black));
 
                     jLow++;
-                    if((i + 1) % 3 == 0)
-                    {
+                    if ((i + 1) % 3 == 0) {
                         iLow++;
                         jLow -= 3;
                     }
@@ -290,13 +305,10 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    void emptyBoardWarning()
-    {
+    void emptyBoardWarning() {
         freeze = true;
-        for(int i = 0; i < 9; i++)
-        {
-            for(int j = 0; j < 9; j++)
-            {
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
                 textView[i][j].setBackgroundColor(getResources().getColor(R.color.green));
             }
         }
@@ -306,10 +318,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 // Do something after 1s
-                for(int i = 0; i < 9; i++)
-                {
-                    for(int j = 0; j < 9; j++)
-                    {
+                for (int i = 0; i < 9; i++) {
+                    for (int j = 0; j < 9; j++) {
                         textView[i][j].setBackgroundColor(getResources().getColor(R.color.white));
                     }
                 }
@@ -319,18 +329,17 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void resetBoard(View view)
-    {
-        if(freeze || solveClicked)
+    public void resetBoard(View view) {
+        if (freeze || solveClicked)
             return;
 
         bI = bJ = -1;
         freeze = solveClicked = solved = false;
+        rowNotSafe = colNotSafe = blockNotSafe = false;
+
         clicked = null;
-        for(int i = 0; i < 9; i++)
-        {
-            for(int j = 0; j < 9; j++)
-            {
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
                 board[i][j] = ' ';
                 textView[i][j].setText(" ");
                 textView[i][j].setTextColor(getResources().getColor(R.color.black));
@@ -343,41 +352,58 @@ public class MainActivity extends AppCompatActivity {
         solveBtn.setText("SOLVE");
     }
 
-    boolean check(String str, int row, int col)
-    {
-        int iLow = row - row % 3, jLow = col -  col % 3;
+    boolean check(String str, int row, int col) {
+        //checks if it is safe to put the char at the highlighted block
+        int iLow = row - row % 3, jLow = col - col % 3;
         char ch = str.charAt(0);
-        if(board[row][col] == ch)
+        if (board[row][col] == ch)
             return true;
 
-        for(int i = 0; i < 9; i++)
-        {
-            if(board[row][i] == ch || board[i][col] == ch || board[iLow][jLow] == ch)
+        boolean notSafe = false;
+        for (int i = 0; i < 9; i++) {
+
+            if (board[row][i] == ch)
             {
-            //   if(!solveClicked)
-            //    warning(str);
-                return false;
+                notSafe = rowNotSafe = true;
             }
-            jLow++;
-            if((i + 1) % 3 == 0)
+            if(board[i][col] == ch)
             {
+                notSafe = colNotSafe = true;
+            }
+            if(board[iLow][jLow] == ch)
+            {
+                notSafe = blockNotSafe = true;
+            }
+
+            jLow++;
+            if ((i + 1) % 3 == 0) {
                 iLow++;
                 jLow -= 3;
             }
         }
+
+        if(notSafe)
+            return false;
+
         return true;
     }
 
-    public void solve(View view)
-    {
-        if(freeze)
+    public void solve(View view) {
+        if (freeze)
             return;
-        if(solved)
-        {
+        if (solved) {
             Toast.makeText(this, "Sudoku Already Solved!", Toast.LENGTH_SHORT).show();
             return;
         }
         solveClicked = true;
+
+        if (!solve()) // the recursive method
+        {
+            solveClicked = false;
+            Toast.makeText(this, "Invalid Sudoku Entries!", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         lottieAnimationView.setVisibility(View.VISIBLE);
         lottieAnimationView.playAnimation();
 
@@ -390,8 +416,8 @@ public class MainActivity extends AppCompatActivity {
             }
         }, 2200);
 
-        if(bI >= 0) {
-            int iLow = bI - bI % 3, jLow = bJ -  bJ % 3;
+        if (bI >= 0) {
+            int iLow = bI - bI % 3, jLow = bJ - bJ % 3;
             for (int i = 0; i < 9; i++) {
                 textView[bI][i].setBackgroundColor(getResources().getColor(R.color.white));
                 textView[i][bJ].setBackgroundColor(getResources().getColor(R.color.white));
@@ -403,15 +429,10 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         }
-        if(!solve()) // the recursive method
-        {
-            solveClicked = false;
-            Toast.makeText(this, "Invalid Sudoku Entries!", Toast.LENGTH_SHORT).show();
-            return;
-        }
+
         solveClicked = false; // these two lines will execute only when the board will be solve
         solved = true;
-        Button btn = (Button)view;
+        Button btn = (Button) view;
         btn.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.green)));
         btn.setTextColor(getResources().getColor(R.color.white));
         btn.setText("SOLVED");
@@ -420,42 +441,33 @@ public class MainActivity extends AppCompatActivity {
 
     boolean solve() //the main code for solving
     {
-        for(int i = 4, indI = 0; indI < 9; indI++)
-        {
-            if((indI & 1) == 1) //when indI is odd
+        for (int i = 4, indI = 0; indI < 9; indI++) {
+            if ((indI & 1) == 1) //when indI is odd
             {
                 i -= indI;
-            }
-            else
-            {
+            } else {
                 i += indI;
             }
 
-            for(int j = 4, indJ = 0; indJ < 9; indJ++)
-            {
-                if((indJ & 1) == 1) // when indJ is odd
+            for (int j = 4, indJ = 0; indJ < 9; indJ++) {
+                if ((indJ & 1) == 1) // when indJ is odd
                 {
                     j -= indJ;
-                }
-                else
-                {
+                } else {
                     j += indJ;
                 }
                 //Now we are starting from centre of board
-                if(board[i][j] == ' ')
-                {
-                 //   Log.d("LOG", Integer.toString(i) + "  " + Integer.toString(j));
-                    for(char ch = '1'; ch <= '9'; ch++)
-                    {
-                        if(check(Character.toString(ch), i, j))
-                        {
+                if (board[i][j] == ' ') {
+                    //   Log.d("LOG", Integer.toString(i) + "  " + Integer.toString(j));
+                    for (char ch = '1'; ch <= '9'; ch++) {
+                        if (check(Character.toString(ch), i, j)) {
                             board[i][j] = ch;
                             textView[i][j].setText(Character.toString(ch));
                             textView[i][j].setTextColor(getResources().getColor(R.color.green2));
 
-                       //     pause(10);
+                            //     pause(10);
 
-                            if(solve())
+                            if (solve())
                                 return true;
 
                             board[i][j] = ' ';
@@ -479,12 +491,11 @@ public class MainActivity extends AppCompatActivity {
         } while (System.currentTimeMillis() < timestamp + timeInMilliSeconds);
 
     }
+
     boolean solveMini(String str, int row, int col) //the main code for solving
     {
-        for(int i = 0; i < 9; i++)
-        {
-            for(int j = 0; j < 9; j++)
-            {
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
 //                if(i == row && j == col && board[row][col] != str.charAt(0))
 //                {
 //                    char temp = board[row][col];
@@ -499,15 +510,12 @@ public class MainActivity extends AppCompatActivity {
 //                    return false;
 //                }
 //                else
-                if(board[i][j] == ' ')
-                {
-                    for(char ch = '1'; ch <= '9'; ch++)
-                    {
-                        if(check(Character.toString(ch), i, j))
-                        {
+                if (board[i][j] == ' ') {
+                    for (char ch = '1'; ch <= '9'; ch++) {
+                        if (check(Character.toString(ch), i, j)) {
                             board[i][j] = ch;
 
-                            if(solveMini(str, row, col))
+                            if (solveMini(str, row, col))
                                 return true;
 
                             board[i][j] = ' ';

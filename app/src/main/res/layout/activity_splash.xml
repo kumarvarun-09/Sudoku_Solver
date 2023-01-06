@@ -10,13 +10,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
 
         <ImageView
-            android:layout_width="250dp"
-            android:layout_height="250dp"
-            android:src="@drawable/istockphoto_sudoku"/>
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/istockphoto_sudoku" />
 
 
         <TextView
@@ -24,7 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:text="Sudoku Solver"
-            android:textColor="@color/red"
+            android:textColor="@color/blue"
             android:textSize="40dp"
             android:textStyle="bold" />
 
@@ -32,7 +31,7 @@
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/animation_view"
             android:layout_width="wrap_content"
-            android:layout_height="150dp"
+            android:layout_height="214dp"
             app:lottie_autoPlay="true"
             app:lottie_loop="true"
             app:lottie_rawRes="@raw/comp" />
@@ -42,12 +41,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="0dp"
             android:text="By Varun Kumar"
-            android:textColor="@color/red"
+            android:textColor="@color/blue"
             android:textSize="28dp"
             android:textStyle="bold" />
 
     </LinearLayout>
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
