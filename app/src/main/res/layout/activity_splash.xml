@@ -10,13 +10,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
 
         <ImageView
             android:layout_width="250dp"
             android:layout_height="250dp"
-            android:src="@drawable/istockphoto_sudoku"/>
+            android:src="@drawable/istockphoto_sudoku" />
 
 
         <TextView
@@ -47,7 +46,6 @@
             android:textStyle="bold" />
 
     </LinearLayout>
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
