@@ -24,7 +24,7 @@
             android:layout_marginTop="30dp"
             android:text="Sudoku Solver"
             android:textColor="@color/blue"
-            android:textSize="40dp"
+            android:textSize="42dp"
             android:textStyle="bold" />
 
 
