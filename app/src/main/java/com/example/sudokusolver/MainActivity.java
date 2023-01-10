@@ -396,14 +396,6 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
         solveClicked = true;
-
-        if (!solve()) // the recursive method
-        {
-            solveClicked = false;
-            Toast.makeText(this, "Invalid Sudoku Entries!", Toast.LENGTH_SHORT).show();
-            return;
-        }
-
         lottieAnimationView.setVisibility(View.VISIBLE);
         lottieAnimationView.playAnimation();
 
@@ -412,9 +404,21 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 // Do something after 5s = 5000ms
+                solve2(view);
                 lottieAnimationView.setVisibility(View.INVISIBLE);
             }
-        }, 2200);
+        }, 2450);// perfect value
+
+    }
+
+    void solve2(View view)
+    {
+        if (!solve()) // the recursive method
+        {
+            solveClicked = false;
+            Toast.makeText(this, "Invalid Sudoku Entries!", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
         if (bI >= 0) {
             int iLow = bI - bI % 3, jLow = bJ - bJ % 3;
@@ -436,9 +440,7 @@ public class MainActivity extends AppCompatActivity {
         btn.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.green)));
         btn.setTextColor(getResources().getColor(R.color.white));
         btn.setText("SOLVED");
-
     }
-
     boolean solve() //the main code for solving
     {
         for (int i = 4, indI = 0; indI < 9; indI++) {
