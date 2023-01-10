@@ -1356,7 +1356,6 @@
         android:layout_height="match_parent"
         android:background="@color/darkGrey"
         android:visibility="invisible"
-        app:lottie_loop="true"
         app:lottie_autoPlay="true"
         app:lottie_rawRes="@raw/loading_turtle" />
 </androidx.constraintlayout.widget.ConstraintLayout>
